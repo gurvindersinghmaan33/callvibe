@@ -1,7 +1,8 @@
 import express from "express";
 import { createServer } from "http";
 import { Server } from "socket.io";
-import { join } from 'path';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 
 const app = express();
 const server = createServer(app);
@@ -12,6 +13,9 @@ const io = new Server(server, {
   },
 });
 
+// Get the directory name using import.meta.url
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 // Serve static files from the 'public' directory
 app.use(express.static(join(__dirname, 'public')));
 
