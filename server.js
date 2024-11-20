@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
   res.sendFile(join(__dirname, 'public', 'index.html'));  // Ensure index.html is in 'public'
 });
 
-const PORT = process.env.PORT || 3233;
+const PORT = process.env.PORT || 80;
 
 const waitingUsers = []; // Queue for waiting users
 const activeCalls = {}; // Object to track active calls by socket ID
