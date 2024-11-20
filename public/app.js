@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     startMyVideo();
 
-    const socket = io("http://127.0.0.1:3233");
+    const socket = io("https://callvibeatgmpire.onrender.com:3233");
 
     // Single Method for peer connection
     const PeerConnection = (function () {
