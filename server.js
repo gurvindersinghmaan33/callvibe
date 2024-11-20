@@ -10,6 +10,13 @@ const io = new Server(server, {
     methods: ["GET", "POST"],
   },
 });
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Default route to serve index.html (or any other HTML files)
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html')); // Ensure index.html is in 'public'
+});
 const PORT = process.env.PORT || 3233;
 
 const waitingUsers = []; // Queue for waiting users
