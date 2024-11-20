@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Callvibe</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="icon.png" type="image/png">
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <p class="header-title">CallVibe</p>
+    </div>
+  </header>
+
+  <main>
+    <div id="form-container" class="form-container">
+      <div class="banner">
+        <p>Match your Vibe</p>
+      </div>
+      <div class="form">
+        <form>
+          <img src="icon.png" alt="Icon Image" />
+
+          <div class="input-fields">
+            <p>Let others know about you</p>
+            <div>
+              <label for="gender">Gender:</label>
+              <select id="gender" name="gender">
+                <option value="any" selected>Any</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            <div>
+              <label for="age">Age:</label>
+              <input type="number" id="age" name="age" min="18" max="100" placeholder="Default : Age Not Specified" />
+            </div>
+
+            <div>
+              <label for="interests">Interests:</label>
+              <input type="text" id="interests" name="interests" placeholder="Enter (Comma Separated) interests" />
+            </div>
+          </div>
+
+          <button type="button" id="startBtn">Start</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="video-container" class="video-container">
+      <div id="remote-video" class="remote-video">
+        <video id="fullScreenVideo" autoplay loop></video>
+      </div>
+      <div id="local-video" class="local-video">
+        <video id="smallVideo" autoplay loop></video>
+      </div>
+      <div class="controls-wrapper">
+        <div class="controls">
+          <button id="startStopVideo" class="control-button"><img src="video-camera.png" alt="start"></button>
+          <button id="flipCamera" class="control-button"><img src="flip.png" alt="flip"></button>
+          <button id="screenShare" class="control-button"><img src="share-screen.png" alt="share"></button>
+          <button id="muteUnmute" class="control-button"><img src="mute.png" alt="mute"></button>
+          <button id="endCall" class="control-button"><img src="phone-call-end.png" alt="end"></button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Callvibe. All rights reserved. Powered by GMpire</p>
+  </footer>
+
+  <script src="server.io.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
